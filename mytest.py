@@ -67,6 +67,7 @@ class TestPasswordManager(unittest.TestCase):
 
         # Ladataan
         load_passwords()
+        self.assertGreater(len(websites), 0)
 
         self.assertEqual(websites[0], "example.com")
         self.assertEqual(usernames[0], "testuser")
