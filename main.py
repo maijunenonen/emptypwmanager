@@ -115,9 +115,14 @@ def load_passwords():
         with open("vault.txt", "r") as file:
             vault = json.load(file)
 
-        websites = vault["websites"]
-        usernames = vault["usernames"]
-        encrypted_passwords = vault["passwords"]
+        websites.clear()
+        websites.extend(vault["websites"])
+                              
+        usernames.clear()
+        usernames.extend(vault["usernames"])
+
+        encrypted_passwords.clear()
+        encrypted_passwords.extend(vault["passwords"])
 
     except FileNotFoundError:
         print("Salasanaholvitiedostoa ei löytynyt.")
