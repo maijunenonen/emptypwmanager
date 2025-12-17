@@ -25,7 +25,7 @@ def caesar_decrypt(text, shift):
 
 # Salasanan vahvuuden tarkistusfunktio
 def is_strong_password(password):
-     """
+    """
     Tarkistaa, onko salasana riittävän vahva.
     """
     if len(password) < 8:
@@ -42,7 +42,7 @@ def is_strong_password(password):
 
 # Salasanan generointifunktio
 def generate_password(length):
-      """
+    """
     Luo satunnaisen vahvan salasanan annetun pituisena.
     """
     characters = string.ascii_letters + string.digits + "!@#$%^&*()"
@@ -82,7 +82,7 @@ def add_password():
 
 # Funktio salasanan hakemiseen
 def get_password():
-     website = input("Anna verkkosivun nimi: ")
+    website = input("Anna verkkosivun nimi: ")
 
     if website in websites:
         index = websites.index(website)
@@ -131,8 +131,8 @@ def main():
         print("3. Tallenna salasanat")
         print("4. Lataa salasanat")
         print("5. Lopeta")
-    
-    choice = input("Valitse toiminto: ")
+        
+        choice = input("Valitse toiminto: ")
 
         if choice == "1":
             add_password()
